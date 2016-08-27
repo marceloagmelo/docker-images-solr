@@ -1,0 +1,27 @@
+{
+    "kind": "PersistentVolumeClaim",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "solr"
+    },
+    "spec": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "resources": {
+            "requests": {
+                "storage": "10Gi"
+            }
+        },
+        "volumeName": "solr"
+    },
+    "status": {
+        "phase": "Bound",
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "capacity": {
+            "storage": "10Gi"
+        }
+    }
+}
