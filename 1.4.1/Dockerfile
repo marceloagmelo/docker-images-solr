@@ -24,7 +24,7 @@ USER $SOLR_USER
 
 WORKDIR ${SOLR_HOME}/
 
-VOLUME ["/opt/solr/solr/data"]
+VOLUME ["/opt/solr"]
 
 ENV PATH /opt/solr:$PATH
 
