@@ -13,12 +13,12 @@ RUN groupadd -r -g $SOLR_UID $SOLR_USER && \
 RUN (mkdir -p ${SOLR_HOME})
 
 # copy solr
-#COPY apache-solr-1.4.1.tgz /tmp/
 COPY solr/ ${SOLR_HOME}/
-RUN (sudo chown -R $SOLR_USER:$SOLR_USER ${SOLR_HOME})
 
 ADD start.sh ${SOLR_HOME}/
 RUN chmod 755 ${SOLR_HOME}/start.sh
+
+RUN (sudo chown -R $SOLR_USER:$SOLR_USER ${SOLR_HOME})
 
 USER $SOLR_USER
 
@@ -29,5 +29,4 @@ VOLUME ["/opt/solr"]
 ENV PATH /opt/solr:$PATH
 
 EXPOSE 8983
-#CMD ["java -jar start.jar", "run"]
 CMD ["/opt/solr/start.sh", "run"]

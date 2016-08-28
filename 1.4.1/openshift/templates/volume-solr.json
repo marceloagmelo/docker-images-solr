@@ -12,7 +12,7 @@
             "storage": "10Gi"
         },
         "hostPath": {
-            "path": "/opt/solr/data"
+            "path": "/opt/solr"
         },
         "accessModes": [
             "ReadWriteOnce"

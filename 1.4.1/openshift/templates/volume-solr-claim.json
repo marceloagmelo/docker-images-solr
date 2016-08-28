@@ -10,10 +10,10 @@
         ],
         "resources": {
             "requests": {
-                "storage": "10Gi"
+                "storage": "5Gi"
             }
         },
-        "volumeName": "solr"
+        "volumeName": "solr-teste-01"
     },
     "status": {
         "phase": "Bound",
@@ -21,7 +21,7 @@
             "ReadWriteOnce"
         ],
         "capacity": {
-            "storage": "10Gi"
+            "storage": "5Gi"
         }
     }
 }
